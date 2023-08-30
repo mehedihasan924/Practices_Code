@@ -1,47 +1,84 @@
-import {createFactory, useState}from 'react';
+import {createFactory, useEffect, useState}from 'react';
 import './App.css'
 import Image from '../public/vite.svg'
 
 
 export default function Accordion(){
     return (
-   < Count> </Count>
+    
+    //  < Count> </Count>
+    // <Product> </Product>
+     <ExternalUser> </ExternalUser>
+    // <Hasan Name={user.name}></Hasan>
     )
 }
+function ExternalUser(){
+   const [ users, setUser]=useState([])
+   useEffect(()=>{
 
-
-function Count(){
- const [count, setCount]= useState(0);
-
-
-  // count state code shortcut@@@@ 
-    const incriensCount=()=> setCount(count+2); 
-    const decrisCount=()=>setCount(count-1)
-
-
-  // count state code@@@@ 
-    // const [count, setCount]= useState(0);
-    // const incriensCount=()=>{
-    //    const newCount=count+1;
-    // setCount(newCount); 
-    // }
-  return(
+     fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res=>res.json())
+      .then(data=> setUser(data))
+   },[]);
+   return(
     <div>
-          <h1> Counter:{count} </h1>
-          <button  onClick={incriensCount} > Click Me </button>
-          <button  onClick={decrisCount} > Click Me </button>
+          <h1>External User  </h1>    
+        {
+          users.map(user => 
+          // <Hasan Name={user.name}></Hasan>
+     
+              <> <li> {user.id } <br />
+                  {user.name} <br />
+                    {user.email} <br />
+                    {}
+                  </li> 
+            </>
+          )
+        }
     </div>
-  )
-}
+   )
 
+}
+// function Hasan(props){
+//   return(
+//     <div>
+//     <h1> Name: {props.name} </h1>
+//    </div>
+//   )
+
+// }
+
+
+
+
+// function Count(){
+//   // count state code shortcut@@@@ 
+//   const [count, setCount]= useState(0);
+
+//       const incriensCount=()=> setCount(count+2); 
+//       const decrisCount=()=>setCount(count-1)
+//   // count state code@@@@ 
+//     // const [count, setCount]= useState(0);
+//     // const incriensCount=()=>{
+//     //    const newCount=count+1;
+//     // setCount(newCount); 
+//     // }
+//   return(
+//     <div>
+//           <h1> Counter:{count} </h1>
+//           <button  onClick={incriensCount} > Click Me </button>
+//           <button  onClick={decrisCount}  > Click Me </button>
+//     </div>
+//   )
+// }
 // export default function Accordion(){
 //   const products=[
 //     { name:'Potatu', price:"450" ,desc: "h8usdc zxci sujsaspo suigsn sixs" },
 //     { name:'Banana', price:"450",desc: "h8usdc zxci sujsaspo suigsn sixs"},
 //     { name:'Mengo', price:"450kg", desc: "h8usdc zxci sujsaspo suigsn sixs"},
 //     { name:'Orenge', price:"300kg", desc: "h8usdc zxci sujsaspo suigsn sixs"},
-
 //   ]
+
 //   return(
 //     <div className='show_product'>
 

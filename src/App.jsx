@@ -1,44 +1,94 @@
-import {createFactory, useEffect, useState}from 'react';
+import { useEffect, useState}from 'react';
 import './App.css'
-import Image from '../public/vite.svg'
+import Preson from './Component/preson/person'
+import  Country from './Component/Country/Country'
 
 
 export default function Accordion(){
     return (
-    
-    //  < Count> </Count>
-    // <Product> </Product>
-     <ExternalUser> </ExternalUser>
-    // <Hasan Name={user.name}></Hasan>
+  <Preson> </Preson>
+      
+//  <Hasan> </Hasan> 
+    // {/* //  < Count> </Count>
+    // // // <Product> </Product>
+    // //  <ExternalUser> </ExternalUser> */}
+    // {/* // <Hasan Name={user.name}></Hasan> */}
+      
+   
     )
 }
-function ExternalUser(){
-   const [ users, setUser]=useState([])
-   useEffect(()=>{
 
-     fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res=>res.json())
-      .then(data=> setUser(data))
-   },[]);
-   return(
-    <div>
-          <h1>External User  </h1>    
-        {
-          users.map(user => 
-          // <Hasan Name={user.name}></Hasan>
+// function Hasan (){
+//   const [countries , setCountries]=useState([]);
+//    useEffect( ()=>{
+//       fetch('https://restcountries.com/v3.1/all')
+//       .then(res=>res.json())
+//       .then(data => setCountries(data))
+
+//    }, [])
+//   return(
+//     <div>
+//       <h1>
+//         All Countrier API Data load system
+//       </h1>
+//       <h3> Counntry Number  {countries.length}</h3>
+//       {
+//         countries.map( country => 
+//           <Hasan_hussain  name={country.name.common} population={country.population} area={country.area}> </Hasan_hussain>
+          
+//           // <> 
+//           //     <div>
+//           //         <h3> Name: {data.name.common}</h3>      
+//           //     </div>         
+//           // </>     
+//          )
+//       }
+//     </div>
+//   )
+// }
+
+// function Hasan_hussain(props){
+//   return(
+//    <div>
+//      <h1>Name: {props.name}</h1>
+//     <p> popu: {props.population}</p>
+//     <p> Area no : {props.area}</p>
+   
+//    </div>
+ 
+//   )
+// }
+
+
+
+// useEffect ar maddome data fetch@@@@
+// function ExternalUser(){
+//    const [ users, setUser]=useState([])
+//    useEffect(()=>{
+
+//      fetch('https://jsonplaceholder.typicode.com/users')
+//       .then(res=>res.json())
+//       .then(data=> setUser(data))
+//    },[]);
+//    return(
+//     <div>
+//           <h1>External User  </h1>    
+//         {
+//           users.map(user => 
+//           // <Hasan Name={user.name}></Hasan>
      
-              <> <li> {user.id } <br />
-                  {user.name} <br />
-                    {user.email} <br />
-                    {}
-                  </li> 
-            </>
-          )
-        }
-    </div>
-   )
+//               <> <li> {user.id } <br />
+//                   {user.name} <br />
+//                     {user.email} <br />
+//                     {}
+//                   </li> 
+//             </>
+//           )
+//         }
+//     </div>
+//    )
 
-}
+// }
 // function Hasan(props){
 //   return(
 //     <div>
@@ -50,9 +100,8 @@ function ExternalUser(){
 
 
 
-
+//   // count state code shortcut Eventhendeler@@@@ 
 // function Count(){
-//   // count state code shortcut@@@@ 
 //   const [count, setCount]= useState(0);
 
 //       const incriensCount=()=> setCount(count+2); 
@@ -71,6 +120,8 @@ function ExternalUser(){
 //     </div>
 //   )
 // }
+
+
 // export default function Accordion(){
 //   const products=[
 //     { name:'Potatu', price:"450" ,desc: "h8usdc zxci sujsaspo suigsn sixs" },

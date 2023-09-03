@@ -1,4 +1,23 @@
-.main_div{
+.Card_main-div{
+    display: flex !important;
+}
+.card_div{
+
+     background-color: blue;
+     margin: 20px;
+     border-radius: 10px;
+     border: 1px solid white;
+     width: 20%;
+     color: white;
+     text-align: center;
+     padding: 20px;
+}
+.Loaddata{
+   
+    display: flex;
+}
+
+/* .main_div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -25,3 +44,7 @@
     margin: 20px;
     text-align: center;
 }
+body{
+    margin: 0;
+    padding: 0;
+} */

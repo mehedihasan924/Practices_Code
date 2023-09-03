@@ -1,0 +1,17 @@
+.count-main-div{
+    display: grid;
+    grid-template-columns: repeat(3 ,1ft);
+    column-gap: 10px;
+}
+
+
+.count-div{
+    display: grid;
+    grid-template-columns: repeat(3 ,1ft);
+    column-gap: 10px;
+    background-color: aqua;
+    padding: 20px;
+    margin: 20px;
+    width: 200px;
+
+}

@@ -5,10 +5,8 @@ import './index.css'
 import Country from './Component/Country/Country'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    
+  <React.StrictMode>  
       <App />
-      <Country/> 
   </React.StrictMode>
 )
  

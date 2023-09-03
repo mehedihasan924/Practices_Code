@@ -1,0 +1,6 @@
+.main-div-country{
+    display: grid;
+    grid-template-columns: repeat(3 , 1ft);
+    column-gap: 10px;
+}
+

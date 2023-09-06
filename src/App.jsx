@@ -1,92 +1,97 @@
-import React, { useEffect, useState } from 'react';
-import './App.css'
+import React from 'react';
+import Cosmetics from './Component/Cosmetics/Cosmetics';
+import Shose from './Component/Shose/Shose';
 const App = () => {
   return (
     <div>
-      < DataLoad></DataLoad>
-      <District Name={'Moulvibazar'} districk={"Destrick"}> </District>
-      <District Name={'sunamgange'} districk={"Destrick"}> </District>
-      <District Name={'Sylhet'} districk={"Destrick"}> </District>
-      <District Name={'Hobigange'} districk={"Destrick"}> </District>
+      <Cosmetics></Cosmetics>
+      <Shose></Shose>
     </div>
   );
 };
 
-function DataLoad(){
-   const [ Posts, setposts]=useState([])
-   useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(res =>res.json())
-        .then( data=>setposts(data))
-
-   }, [])
-  return(
-    <div>
-      <h1> Mehedi hasan {Posts.length} </h1>
-      {
-        Posts.map(post => <Post2 
-          name={post.name}
-          gmail={post.email}
-          Users={post.username}
-          company={post.company.bs}
-        > </Post2> )
-      }
-    </div>
-  )
-}
-function Post2(props){
-  return(
-    <div className='Loaddata'>
-      <div>
-        <h2> Name : {props.name}</h2>
-        <p> Gmail: {props.gmail} </p>
-        <p> User: {props.Users} </p>
-        <p> Company: {props.company}</p>
-
-      </div>    
-    </div>
-  )
-}
-
-
-
-function District(props){
-  const [ Count,setCount]=useState(1)
-        // const power=()=>{
-        //    const newPower= Count*2
-        //    setCount(newPower)
-       // }
-  const IncrigeCount= ()=>setCount(Count+1)
-  const drigeCount= ()=>setCount(Count-1)
-
-  return(
-  <div className="Card_main-div">
-      <div className='card_div'>
-       <h2> Name: {props.Name}</h2>
-        <p>specialty: {props.districk}</p>
-        <h2> Power: {Count}</h2>
-        <button  onClick={IncrigeCount} > The Boost Power</button>
-        <button  onClick={drigeCount} > The Low Power</button>
-    </div>
-  </div>
-  )
-}
-
-
-
-
-
 export default App;
 
 
+// import React, { useEffect, useState } from 'react';
+// import Person from './Component/preson/person'
+// import Watch from './Component/Watch/watch'
+// import './App.css'
+// const App = () => {
+//   return (
+//     <div>
+//       <Watch></Watch>
+//       <Person Name={'My Country name is '}></Person>
+//       < DataLoad Name={'My name is '}></DataLoad>
+//       <District Name={'Moulvibazar'} districk={"Destrick"}> </District>
+//       <District Name={'sunamgange'} districk={"Destrick"}> </District>
+//       <District Name={'Sylhet'} districk={"Destrick"}> </District>
+//       <District Name={'Hobigange'} districk={"Destrick"}> </District>
+//     </div>
+//   );
+// };
+
+// function DataLoad(props){
+//    const [ Posts, setposts]=useState([])
+//    useEffect(()=>{
+//         fetch('https://jsonplaceholder.typicode.com/users')
+//         .then(res =>res.json())
+//         .then( data=>setposts(data))
+
+//    }, [])
+//   return(
+//     <div>
+//       <h1> Mehedi hasan {props.Name} </h1>
+//       {
+//         Posts.map(post => <Post2 
+//           name={post.name}
+//           gmail={post.email}
+//           Users={post.username}
+//           company={post.company.bs}
+//         > </Post2> )
+//       }
+//     </div>
+//   )
+// }
+// function Post2(props){
+//   return(
+//     <div className='Loaddata'>
+//       <div>
+//         <h2> Name : {props.name}</h2>
+//         <p> Gmail: {props.gmail} </p>
+//         <p> User: {props.Users} </p>
+//         <p> Company: {props.company}</p>
+
+//       </div>    
+//     </div>
+//   )
+// }
 
 
 
+// function District(props){
+//   const [ Count,setCount]=useState(1)
+//         // const power=()=>{
+//         //    const newPower= Count*2
+//         //    setCount(newPower)
+//        // }
+//   const IncrigeCount= ()=>setCount(Count+1)
+//   const drigeCount= ()=>setCount(Count-1)
 
+//   return(
+//   <div className="Card_main-div">
+//       <div className='card_div'>
+//        <h2> Name: {props.Name}</h2>
+//         <p>specialty: {props.districk}</p>
+//         <h2> Power: {Count}</h2>
+//         <button  onClick={IncrigeCount} > The Boost Power</button>
+//         <button  onClick={drigeCount} > The Low Power</button>
+//     </div>
+//   </div>
+//   )
+// }
 
-
-
-
+// export default App;
 
 
 

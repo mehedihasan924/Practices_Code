@@ -4,7 +4,7 @@ import './preson.css'
 
 
 
-const person = () => {    
+const person = (props) => {    
     const [Countries , setCountries]=useState([]);
         useEffect(()=>{
         fetch('https://restcountries.com/v3.1/all')
@@ -13,8 +13,8 @@ const person = () => {
     },[])
     return (
         <div  >   
-     <h1>   Bangladesh     </h1>
-           <div  className='main-div-country'>
+     <h1> {props.Name}  Bangladesh     </h1>
+           {/* <div  className='main-div-country'>
            {          
                     Countries.map(country =>
                      <Country                  
@@ -26,7 +26,7 @@ const person = () => {
                         >                           
                         </Country>                     
                 ) } 
-                </div>     
+                </div>      */}
         </div>  
     );
 };

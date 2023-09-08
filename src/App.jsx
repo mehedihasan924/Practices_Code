@@ -4,7 +4,7 @@ import Shose from './Component/Shose/Shose';
 const App = () => {
   return (
     <div>
-      <Cosmetics></Cosmetics>
+      {/* <Cosmetics></Cosmetics> */}
       <Shose></Shose>
     </div>
   );

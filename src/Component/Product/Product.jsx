@@ -1,5 +1,5 @@
 import React from 'react';
-import { addToDb } from '../../Utilities/Facebd';
+import { addToDb, removeFromDb } from '../../Utilities/Facebd';
 const Product = ( props) => {
     // json file data loade @@@
    const {guid, index,isActive,id}= props.product
@@ -16,6 +16,10 @@ const addToCard=(id)=>{
 }
 const item_hendeler=()=> addToCard(id);
 
+  const  removefromCart=id=>{
+        removeFromDb (id);
+  }
+
     return (
         <div>
             <div> 
@@ -26,6 +30,7 @@ const item_hendeler=()=> addToCard(id);
 
          {/* Card a Item add kora */}
                 <button onClick={item_hendeler }> Add to card</button>
+                <button onClick={()=>removefromCart(id) } > Remove Item </button>
                 {/* <button onClick={()=>addToCard(id)}> Short-cat</button> */}
 
             </div>
